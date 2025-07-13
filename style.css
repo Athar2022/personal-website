@@ -24,17 +24,37 @@ header {
     text-align: center;
 }
 
-nav {
-    background-color:  var(--dark);
+ nav {
+    background-color: var(--dark);
     padding: 1rem;
     position: fixed;
-    top: 3px;
+    top: 0px;
     z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+
+ nav i {
+    display: none !important; 
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+  header nav i{
+    display: block !important;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 5x;
+  }
+}
+
 
 nav a {
     margin: 0 1.5rem;
@@ -57,6 +77,10 @@ nav a:hover {
     border: 2px solid white;
 }
 
+/* 
+@media {
+
+} */
 section {
     padding: 3rem 1rem;
     max-width: 1200px;
@@ -67,7 +91,7 @@ section:nth-child(even) {
     background-color: var(--light);
 }
 
-section:nth-child(odd) .card{
+section:nth-child(odd) .card {
     background-color: var(--light);
 
 }
